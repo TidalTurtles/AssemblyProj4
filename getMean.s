@@ -21,8 +21,10 @@ getMean_:
   #idiv on linux uses specified registers
   # idiv = eax / specified
 
-#  mov $4, %ecx
-#  idiv %ecx 
+  cdq             #from example in class, sign extends so division possible? I think
+  mov $4, %ecx
+  idiv %ecx
+   
 
   #result is in eax so done
 
