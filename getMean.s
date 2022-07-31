@@ -7,7 +7,7 @@
 
 getMean_:
 
-  mov %rdi, %rax  #put first value in eax(return position) so you don't forget
+  mov (%rdi), %rax  #put first value in eax(return position) so you don't forget
 
   #now add the rest
 

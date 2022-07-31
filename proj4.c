@@ -8,7 +8,7 @@
 #include<time.h>   //time implimented for random number
 
 //call to the assembly program
-extern int getMean(int q, int w, int e, int r) asm ("getMean_");
+extern int getMean(int *q, int w, int e, int r) asm ("getMean_");
 
 int main(void){
 
@@ -33,7 +33,7 @@ int main(void){
    int meanFromC = (q+w+e+r) / 4;
    
    //call the assembly program with numbers.
-   int assemblyMean = getMean(q, w, e, r);
+   int assemblyMean = getMean(&q, w, e, r);
 
    //Print all results and hope they match
    printf("\n The result from the Assembly program was %d \n\n", assemblyMean);
